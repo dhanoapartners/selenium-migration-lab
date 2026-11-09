@@ -25,6 +25,9 @@ class CheckoutTest extends BaseTest {
     driver.findElement(testId("ship-city")).sendKeys("San Ramon");
     new Select(driver.findElement(testId("ship-state"))).selectByValue("CA");
     driver.findElement(testId("ship-zip")).sendKeys("94583");
+    // The "Added to cart" toast can still be covering the button: Selenium would throw
+    // ElementClickInterceptedException. Wait for it to go. (Playwright waits for this automatically.)
+    wait.until(ExpectedConditions.invisibilityOfElementLocated(testId("toast")));
     click(testId("shipping-continue"));
 
     click(testId("delivery-standard"));

@@ -11,6 +11,7 @@ Every Selenium idea in `selenium-java/` and where it went in `playwright/`. Open
 | `driver.findElement(by)` (finds now, or throws) | `page.getByTestId(...)` (a recipe, resolved on use) | Locators are lazy and re-resolved on every action, so no `StaleElementReferenceException`. |
 | `WebDriverWait` + `ExpectedConditions` | Auto-waiting actions + `expect(...)` assertions that retry | Most explicit waits disappear. |
 | `Thread.sleep(...)` | Nothing | Wait for a state, never a time. |
+| `ElementClickInterceptedException` (a toast or overlay covers the button), fixed with an extra wait | Nothing | Playwright waits until the element can actually receive the click. This repo's CI hit exactly this: see the toast wait in `CheckoutTest.java`. |
 | `sendKeys(...)` | `fill(...)` | `fill` clears first and waits for the field to be editable. |
 | `new Select(el).selectByValue("CA")` | `selectOption('CA')` | |
 | `switchTo().frame(...)` … `switchTo().defaultContent()` | `page.frameLocator(...)` | No switching in and out; nothing to forget. |
