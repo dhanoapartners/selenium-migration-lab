@@ -2,6 +2,14 @@
 
 [![CI](https://github.com/dhanoapartners/selenium-migration-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/dhanoapartners/selenium-migration-lab/actions/workflows/ci.yml)
 
+## What this demonstrates
+
+*By Avneet Dhanoa (QualityFirstQA LLC). Part of a five-repo portfolio; start at [practice-lab](https://github.com/dhanoapartners/practice-lab).*
+
+- **Migration leadership:** the same suite in Selenium + Java + JUnit 5 and in Playwright + TypeScript, so the change is concrete, not theoretical.
+- **A concept-by-concept map** ([MIGRATION.md](MIGRATION.md)) a team can follow: waits, frames, shadow DOM, page objects, API testing.
+- **Both stacks green in CI**, with Allure reports for each.
+
 The same tests written twice against **[Practice Lab](https://www.dhanoapartners.com)**: once in **Selenium + Java + JUnit 5** (the "before"), once in **Playwright + TypeScript** (the "after"). Open them side by side and see exactly what changes when a team migrates.
 
 | Test | Selenium (before) | Playwright (after) |
