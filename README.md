@@ -38,6 +38,15 @@ npx playwright test
 
 Both use the live lab by default; set `LAB_URL` to use a local copy. CI runs both suites on every push and every night.
 
+## Allure reports for both
+
+Both suites write Allure results, so the same kind of report comes out of Selenium and Playwright: open them side by side to compare the runs.
+
+- Selenium: `mvn test`, then `npx allure-commandline generate target/allure-results -o target/allure-report` and open `target/allure-report/index.html`.
+- Playwright: `npx playwright test`, then `npx allure-commandline generate allure-results -o allure-report`.
+
+In CI, both Allure reports are saved with each run (download them from the run's Artifacts). The Allure CLI needs Java 11+.
+
 ## Exercises
 
 1. Count the lines in `CheckoutTest.java` and `checkout.spec.ts`. Which lines disappeared, and why?
