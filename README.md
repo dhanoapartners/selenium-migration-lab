@@ -24,6 +24,8 @@ The same tests written twice against **[Practice Lab](https://www.dhanoapartners
 
 **[MIGRATION.md](MIGRATION.md)** maps every Selenium concept to its Playwright equivalent and walks through a migration step by step.
 
+> **Teaching this as a lab?** [`HANDOUT.md`](HANDOUT.md) is a guided, hands-on student worksheet — run both suites, read them side by side, feel the iframe trap, and migrate a test with AI — with checkpoints to tick along the way. It frames migration as "the same play in two languages."
+
 ## Run the Selenium suite (before)
 
 Needs Java 17+, Maven and Chrome.
